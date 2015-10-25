@@ -27,7 +27,10 @@ var MoviesRock = React.createClass({
         <View style={styles.container}>
           <Text>{movie.title}</Text>
           <Text>{movie.year}</Text>
-          <Image source={{uri: movie.posters.thumbnail}} />
+          <Image
+            source={{uri: movie.posters.thumbnail}}
+            style={styles.thumbnail}
+          />
         </View>
       );
     }
@@ -40,15 +43,9 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  thumbnail: {
+      width: 53,
+      height: 81,
   },
 });
 
